@@ -1,0 +1,9 @@
+-- goo by dolan fe bypass v1.6.2 --
+local net = game.NetworkClient
+local filteringEnabledPatch = "\83\104\117\116\100\111\119\110" -- patch fe to be false
+local bypass = net.Parent[filteringEnabledPatch]
+bypass(game) -- apply fe bypass to datamodel
+workspace.FilteringEnabled = false -- replicate the disabling of fe
+
+-- anything you run below here will bypass fe --
+print(workspace.FilteringEnabled)
